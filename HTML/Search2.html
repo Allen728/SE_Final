@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>您要看哪裡？</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="Search.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.0.3, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <link rel="icon" href="images/travel.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    
+    <script type="application/ld+json">{
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": ""
+      }
+    </script>
+    
+    <!-- select表格 -->
+    <script>
+      department=new Array();
+      department[1]=["新北市","彰化縣","南投縣","雲林縣","嘉義縣","屏東縣","臺東縣","花蓮縣","澎湖縣","基隆市","新竹市","臺北市","嘉義市","金門縣","連江縣","桃園市","臺中市","臺南市","高雄市","宜蘭縣","新竹縣","苗栗縣"]
+      department[2]=["東京","群馬","茨城","札幌","宮崎","長野","廣島","宮城","岡山","京都","鹿兒島","大阪","栃木","佐賀","香川","山形","福島","熊本","新潟","岐阜","長崎","三重","愛知","滋賀","沖繩","奈良","山口","大分","青森","愛媛","德島","山梨","石川","福岡","富山","岩手","和歌山","秋田","高知","福井","島根","旭川","釧路","鳥取","靜岡","函館","北見","神奈川","兵庫","埼玉","千葉"]
+      department[3]=["首爾市政府","江原道廳","忠清北道廳","忠清南道廳","全羅北道","全羅南道廳","慶尚北道廳","慶尚南道廳","濟州特別自治道","釜山市政府","大邱市政府","仁川市政府","光州市政府","大田市政府","蔚山市政府","世宗特別自治市","京畿道政府"];      
+      function renew(index){
+          for(var i=0;i<department[index].length;i++)
+              document.myForm.region.options[i]=new Option(department[index][i], department[index][i]);	// 設定新選項
+          document.myForm.region.length=department[index].length;	// 刪除多餘的選項
+      }
+    </script>
+
+    <!-- google map設定 -->
+    <style>
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Search">
+    <meta property="og:type" content="website">
+  </head>
+
+  <body class="u-body u-overlap">
+    <header class="u-clearfix u-header" id="sec-320d" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-border-1 u-border-custom-color-2 u-line u-line-vertical u-line-1"></div>
+        <img class="u-image u-image-default u-preserve-proportions u-image-1" src="images/logo2.png" alt="" data-image-width="180" data-image-height="70" data-href="Home.html" data-page-id="34435806">
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; font-weight: 700;">
+            <a class="u-btn-text u-button-style u-custom-color u-custom-text-color u-nav-link u-text-body-alt-color" href="#" style="padding: 4px 24px; font-size: calc(1em + 8px);">
+              <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 302 302" style="undefined"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-a760"></use></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-a760" x="0px" y="0px" viewBox="0 0 302 302" style="enable-background:new 0 0 302 302;" xml:space="preserve" class="u-svg-content"><g><rect y="36" width="302" height="30"></rect><rect y="236" width="302" height="30"></rect><rect y="136" width="302" height="30"></rect>
+                </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
+            </a>
+          </div>
+      <div class="u-custom-menu u-nav-container">
+        <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-palette-3-base u-text-palette-1-dark-2" href="Home.html">Home</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-palette-3-base u-text-palette-1-dark-2" href="Search.html">Visitor</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-palette-3-base u-text-palette-1-dark-2" href="Member.html">Member</a>
+          </li><li class="u-nav-item"><a class="u-button-style u-nav-link u-palette-3-base u-text-palette-1-dark-2" href="Search.html">Search</a>
+          </li></ul>
+      </div>
+      <div class="u-custom-menu u-nav-container-collapse">
+        <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+          <div class="u-inner-container-layout u-sidenav-overflow">
+            <div class="u-menu-close"></div>
+            <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html">Home</a>
+              </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Search.html">Visitor</a>
+              </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Member.html">Member</a>
+              </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Search.html">Search</a>
+              </li></ul>
+          </div>
+        </div>
+        <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+      </div>
+    </nav>
+    <a href="Member.html" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-custom-color-2 u-btn-1">Login</a>
+    <a href="Visitor.html" class="u-border-1 u-border-active-palette-2-base u-border-hover-palette-1-base u-btn u-button-style u-none u-text-custom-color-2 u-btn-2">SignUp</a>
+  </div></header>
+<section class="u-clearfix u-image u-section-1" src="" id="sec-46e9" data-image-width="1600" data-image-height="857">
+  <div class="u-clearfix u-sheet u-sheet-1"></div>
+</section>
+<form class="u-align-center u-clearfix u-palette-1-light-2 u-section-2" id="carousel_c602" name="myForm">
+  <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1" >
+    <div class="u-gutter-0 u-layout">
+      <div class="u-layout-row">
+        <div class="u-container-style u-layout-cell u-size-12 u-layout-cell-1">
+          <div class="u-container-layout u-container-layout-1">
+            <h6 class="u-text u-text-default u-text-2">
+              <span style="font-weight: 700;"></span>
+              <span style="font-weight: 700;">開始您的旅程</span>
+            </h6>
+            <div class="u-container-style u-preserve-proportions u-group-1">
+              <div class="u-container-layout u-container-layout-2">
+                <select name="country" id="country" onChange="renew(this.selectedIndex);">
+                <option value="-1">請選擇你想去的國家</option>
+                <option value="臺灣">臺灣</option>
+                <option value="日本">日本</option>
+                <option value="韓國">韓國</option>
+                </select>
+                <div class="u-clearfix u-custom-html u-custom-html-1">
+                </div><br><br><br><br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+                <tr>
+                  <button><a href="comment-rating-vistor.html" style="color:steelblue; text-shadow:whitesmoke 2px 2px; font-size: 20px;">看大家怎麼說</a></button>
+                </tr>
+               </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-container-style u-layout-cell u-size-40 u-layout-cell-2">
+          <div class="u-container-layout u-container-layout-3">
+            <div class="u-expanded u-grey-light-2 u-map">
+              <div class="embed-responsive">
+                <!-- <iframe class="embed-responsive-item" src="//maps.google.com/maps?output=embed&amp;q=Manhattan%2C%20New%20York&amp;z=10&amp;t=m" data-map="JTdCJTIyYWRkcmVzcyUyMiUzQSUyMk1hbmhhdHRhbiUyQyUyME5ldyUyMFlvcmslMjIlMkMlMjJ6b29tJTIyJTNBMTAlMkMlMjJ0eXBlSWQlMjIlM0ElMjJyb2FkJTIyJTJDJTIybGFuZyUyMiUzQW51bGwlMkMlMjJhcGlLZXklMjIlM0FudWxsJTJDJTIybWFya2VycyUyMiUzQSU1QiU1RCU3RA=="></iframe> -->
+                <div id="map"></div>
+                <script>
+                var url_string = window.location.href;
+                var url = new URL(url_string);
+                var country = url.searchParams.get('country');
+                var region = url.searchParams.get('region');
+    
+                var Taipei = {lat: 23.58, lng: 120.58};
+                var Seoul = {lat: 37.34, lng: 126.58};
+                var Tokyo = {lat: 35.41, lng: 139.41};
+               
+                 function initMap() {
+                      
+                    if(country == "臺灣"){
+                    	 var map = new google.maps.Map(document.getElementById('map'), {
+                             zoom: 6,
+                             center: Taipei
+                           });
+                           /*var marker = new google.maps.Marker({
+                             position: Taipei,
+                             map: map
+                           });*/
+                    }
+                    if(country == "韓國"){
+                   	 var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 6,
+                            center: Seoul
+                          });
+                          /*var marker = new google.maps.Marker({
+                            position: Seoul,
+                            map: map
+                          });*/
+                   }
+                    if(country == "日本"){
+                   	 var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 6,
+                            center: Tokyo
+                          });
+                          /*var marker = new google.maps.Marker({
+                            position: Tokyo,
+                            map: map
+                          });*/
+                   }
+                    if(country == "-1"){
+                   	 var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 6,
+                            center: Tokyo
+                          });
+                          /*var marker = new google.maps.Marker({
+                            position: Tokyo,
+                            map: map
+                          });*/
+                   }
+                  }
+                  initMap();
+                </script>
+              <script async defer
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEBnKuFNp6C67VZL1nF3WaPKyg_E9U4X0&callback=initMap">
+              </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-align-left u-container-style u-layout-cell u-size-8 u-layout-cell-3">
+          <div class="u-container-layout u-container-layout-4">
+            <h6 class="u-text u-text-default u-text-2">
+              <span style="font-weight: 700;"></span>
+              <span style="font-weight: 700;">地區</span>
+            </h6>
+            <div class="u-table u-table-responsive u-table-1">
+                <select name="region" >
+                  <option value="">選擇地區
+                    <th colspan=2><input type="submit" value="搜尋" onclick= 'openwin(); getData();' style="text-align: center; font-size: 12px; width: 40%; background-color:black;color: white; border-radius: 2mm; border-color: black; "></input></th>
+                </select><br><br><br><br><br>
+                <div class="table-responsive">
+                
+                  <table id="table" border=1 width=40>
+                  	<thead id = "info_table">
+                  	</thead>
+                  </table>
+                </div> 
+            </div>
+          </div>
+        </div>
+        <script language="javascript">
+         
+          var data_object={
+        		"country":country,
+        		"region":region
+          };
+		  
+          function getData(){
+        	  if(country == '-1'){
+        		  alert('請重新選擇')
+        	  }
+        	  else{
+	        	  $.ajax({
+	        		  type:"GET",
+	        		  url:"api/region.do",
+	        		  data: data_object,
+	        		  crossDomain: true,
+	                  cache: false,
+	                  dataType: 'json',
+	                  timeout: 500000,
+	                  success: function (response) {
+	                	  alert("正在搜尋"+country+""+region+"的資訊中，請稍候...");
+	                		
+	                  		var html = "";
+	                  		var country_name = response.response.data[0].country_name;
+	                  		var region_name = response.response.data[0].region_name;
+	                  		var travel_ways = response.response.data[0].travel_ways;
+	                  		
+	                  		html += "<tr>";
+	                  		html += "<th class='text-center' style='width: 15%'>國家:" + country_name + "</th>";
+	                  		html += "</tr>";
+	                  		html += "<tr>";
+	                  		html += "<th class='text-center' style='width: 10%'>地區:" + region_name + "</th>";
+	                  		html += "</tr>";
+	                  		html += "<tr>";
+	                  		html += "<th class='text-center' style='width: 15%'>建議:" + travel_ways + "</th>";
+	                  		html += "</tr>";
+	                  	
+	                  		document.getElementById("info_table").innerHTML = html;
+	
+	                  },
+	                  error: function () {
+	                      alert("無法連線到伺服器！");
+	                  }
+	        		  
+	        	  });
+          
+          	}    
+          }
+          getData();
+          
+          function openInfo(){
+        	  if(country != "-1"){
+        		  $.ajax({
+            		  type:"GET",
+            		  url:"api/region.do",
+            		  data: data_object,
+            		  crossDomain: true,
+                      cache: false,
+                      dataType: 'json',
+                      timeout: 500000,
+                      success: function (response) {
+                    	  var travel_ways = response.response.data[0].travel_ways;
+                    	  window.open ("traffic_info.html?country="+country+"&region="+region+"&ways="+travel_ways, "newwindow", "height=400, width=400,toolbar=no,menubar=no, scrollbars=no, resizable=no, location=no, status=no,left=800,top=230") 
+                      }
+            	  });
+        	  }
+        	  
+          }
+          
+          openInfo();
+          
+        </script>
+          
+      </div>
+    </div>
+  </div>
+</form>
+</body>
+</html>

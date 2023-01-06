@@ -1,0 +1,87 @@
+p {
+  color: blanchedalmond;
+  font: bold;
+}
+
+.background {
+  background-image: url("images/background.jpeg");
+  background-position: 50% 50%;
+}
+
+.background .sheet1 {
+  min-height: 702px;
+}
+
+/* .background .text_slogan{
+  font-size: 1.5em;
+  padding: 1em;
+} */
+.background .text1 {
+  font-size: 4rem;
+  font-family:'Times New Roman', Times, serif;
+  font-style: oblique;
+  margin: 180px 160px 0 80px;
+  text-align:right;
+}
+
+.background .text2 {
+  font-size: 1.0625rem;
+  margin: 7px 692px 60px 50px;
+}
+
+@media (max-width: 1199px) {
+  .background .sheet1 {
+    min-height: 606px;
+  }
+
+  .background .text1 {
+    margin-right: 0;
+  }
+
+  .background .text2 {
+    margin-right: 542px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .background .sheet1 {
+    min-height: 535px;
+  }
+
+  .background .text1 {
+    font-size: 6rem;
+  }
+
+  .background .text2 {
+    margin-right: 322px;
+  }
+}
+
+@media (max-width: 767px) {
+  .background .sheet1 {
+    min-height: 401px;
+  }
+
+  .background .text1 {
+    font-size: 3.75rem;
+  }
+
+  .background .text2 {
+    margin-right: 142px;
+  }
+}
+
+@media (max-width: 575px) {
+  .background .sheet1 {
+    min-height: 252px;
+  }
+
+  .background .text1 {
+    font-size: 3rem;
+  }
+
+  .background .text2 {
+    margin-right: 0;
+  }
+}
